@@ -1,0 +1,54 @@
+// This file is commented out because API routes are not supported in static exports (output: 'export')
+// For static exports, you'll need to use client-side Firebase calls directly
+
+/*
+import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/db';
+import { getServerSession } from 'next-auth';
+
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  try {
+    const session = await getServerSession();
+    
+    if (!session?.user) {
+      return NextResponse.json(
+        { error: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+
+    const plantId = params.id;
+    
+    // Get the plant to verify ownership
+    const plant = await prisma.plant.findUnique({
+      where: { id: plantId },
+    });
+    
+    if (!plant) {
+      return NextResponse.json(
+        { error: 'Plant not found' },
+        { status: 404 }
+      );
+    }
+    
+    // Delete the plant
+    await prisma.plant.delete({
+      where: { id: plantId },
+    });
+    
+    return NextResponse.json(
+      { message: 'Plant deleted successfully' },
+      { status: 200 }
+    );
+  } catch (error: any) {
+    console.error('Error deleting plant:', error);
+    return NextResponse.json(
+      { error: 'Failed to delete plant', details: error.message },
+      { status: 500 }
+    );
+  }
+}
+*/ 

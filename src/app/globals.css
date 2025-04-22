@@ -1,0 +1,133 @@
+/* eslint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* eslint-enable */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 210 0% 100%; /* Light sage */
+    --foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --card: 210 0% 100%; /* Light sage */
+    --card-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --popover: 210 0% 100%; /* Light sage */
+    --popover-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --primary: 158 81% 28%; /* Natural green */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 0% 96.1%; /* Light sage */
+    --secondary-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --muted: 210 0% 96.1%; /* Light sage */
+    --muted-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --accent: 210 0% 96.1%; /* Light sage */
+    --accent-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.3% 26.1%; /* Warm earth tones */
+    --input: 210 0% 89.8%; /* Light sage */
+    --ring: 158 81% 28%; /* Natural green */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 210 0% 100%; /* Light sage */
+    --sidebar-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-primary: 158 81% 28%; /* Natural green */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 0% 96.1%; /* Light sage */
+    --sidebar-accent-foreground: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-border: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-ring: 158 81% 28%; /* Natural green */
+  }
+  .dark {
+    --background: 240 5.3% 26.1%; /* Warm earth tones */
+    --foreground: 210 0% 100%; /* Light sage */
+    --card: 240 5.3% 26.1%; /* Warm earth tones */
+    --card-foreground: 210 0% 100%; /* Light sage */
+    --popover: 240 5.3% 26.1%; /* Warm earth tones */
+    --popover-foreground:  210 0% 100%; /* Light sage */
+    --primary: 158 81% 28%; /* Natural green */
+    --primary-foreground: 0 0% 9%;
+    --secondary: 240 5.3% 26.1%; /* Warm earth tones */
+    --secondary-foreground:  210 0% 100%; /* Light sage */
+    --muted: 240 5.3% 26.1%; /* Warm earth tones */
+    --muted-foreground: 210 0% 100%; /* Light sage */
+    --accent: 240 5.3% 26.1%; /* Warm earth tones */
+    --accent-foreground:  210 0% 100%; /* Light sage */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.3% 26.1%; /* Warm earth tones */
+    --input: 240 5.3% 26.1%; /* Warm earth tones */
+    --ring: 158 81% 28%; /* Natural green */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-foreground: 210 0% 100%; /* Light sage */
+    --sidebar-primary: 158 81% 28%; /* Natural green */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-accent-foreground:  210 0% 100%; /* Light sage */
+    --sidebar-border: 240 5.3% 26.1%; /* Warm earth tones */
+    --sidebar-ring: 158 81% 28%; /* Natural green */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply text-3xl font-bold tracking-tight;
+    font-family: 'Playfair Display', serif;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+    font-family: 'Playfair Display', serif;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+  p {
+    @apply leading-7;
+  }
+}
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-md hover:border-primary/20 hover:-translate-y-1;
+  }
+  
+  .feature-icon {
+    @apply text-primary w-6 h-6;
+  }
+  
+  .app-container {
+    @apply container mx-auto py-6 px-4 max-w-md pb-16;
+  }
+  
+  .app-header {
+    @apply flex items-center justify-between mb-6;
+  }
+  
+  .nav-icon {
+    @apply h-6 w-6 mb-1;
+  }
+  
+  .nav-text {
+    @apply text-xs font-medium;
+  }
+}

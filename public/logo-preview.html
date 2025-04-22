@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenHealth Logo Preview</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #064E3B;
+      margin-bottom: 2rem;
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .logo-row {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .logo-card {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-title {
+      font-size: 0.875rem;
+      color: #444;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .logo-size {
+      font-size: 0.75rem;
+      color: #666;
+    }
+
+    .background {
+      background-color: #eee;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>GreenHealth Logo Preview</h1>
+
+  <div class="logo-container">
+    <div class="logo-row">
+      <div class="logo-card">
+        <div>
+          <img src="/icons/icon-512x512.svg" alt="GreenHealth Logo" width="150" height="150">
+        </div>
+        <p class="logo-title">Square Logo</p>
+        <p class="logo-size">512x512 pixels</p>
+      </div>
+
+      <div class="logo-card">
+        <div>
+          <img src="/icons/icon-192x192.svg" alt="GreenHealth Logo" width="100" height="100">
+        </div>
+        <p class="logo-title">Square Logo</p>
+        <p class="logo-size">192x192 pixels</p>
+      </div>
+    </div>
+
+    <div class="logo-card" style="margin-top: 2rem; width: 100%; max-width: 500px;">
+      <div id="logoWithText" style="width: 100%; text-align: center;"></div>
+      <p class="logo-title">Logo with Text</p>
+      <p class="logo-size">Generated with JavaScript SVG</p>
+    </div>
+  </div>
+
+  <script>
+    // Inline GreenHealthLogoWithText component logic
+    document.getElementById('logoWithText').innerHTML = `
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 600 300"
+        width="100%" 
+        height="auto"
+      >
+        <!-- Logo -->
+        <g transform="translate(20, 20) scale(0.5)">
+          <!-- Background rounded square -->
+          <rect 
+            x="12" 
+            y="12" 
+            width="488" 
+            height="488" 
+            rx="80" 
+            fill="#064E3B" 
+          />
+          
+          <!-- Plant icon -->
+          <g fill="#F5F5DC">
+            <!-- Bottom soil -->
+            <path d="M128,415 C128,415 256,445 384,415 L384,445 L128,445 Z" />
+            
+            <!-- Stem -->
+            <rect x="250" y="250" width="12" height="165" />
+            
+            <!-- Middle leaf -->
+            <path d="M256,162 C256,162 200,212 256,282 C312,212 256,162 256,162 Z" />
+            
+            <!-- Left leaf -->
+            <path d="M180,220 C180,220 220,240 240,310 C160,280 180,220 180,220 Z" />
+            
+            <!-- Right leaf -->
+            <path d="M332,220 C332,220 292,240 272,310 C352,280 332,220 332,220 Z" />
+          </g>
+        </g>
+        
+        <!-- Text -->
+        <g transform="translate(320, 100)">
+          <text 
+            fill="#064E3B" 
+            font-family="Arial, sans-serif" 
+            font-weight="700" 
+            font-size="56"
+            text-anchor="middle"
+          >
+            GreenHealth
+          </text>
+          <text 
+            fill="#064E3B" 
+            font-family="Arial, sans-serif" 
+            font-weight="500" 
+            font-size="24"
+            text-anchor="middle"
+            y="40"
+          >
+            PLANT CARE SYSTEMS
+          </text>
+        </g>
+      </svg>
+    `;
+  </script>
+</body>
+
+</html>

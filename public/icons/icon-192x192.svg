@@ -1,0 +1,7 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <rect width="192" height="192" rx="32" fill="#10b981"/>
+  <path d="M96,40 C96,40 120,60 120,90 C120,106.5 106.5,120 90,120 C60,120 40,96 40,96 C40,96 60,120 90,120 C106.5,120 120,106.5 120,90 C120,60 96,40 96,40 Z" fill="white"/>
+  <path d="M96,40 C96,40 72,60 72,90 C72,106.5 85.5,120 102,120 C132,120 152,96 152,96 C152,96 132,120 102,120 C85.5,120 72,106.5 72,90 C72,60 96,40 96,40 Z" fill="white"/>
+  <path d="M96,152 L96,120" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg> 

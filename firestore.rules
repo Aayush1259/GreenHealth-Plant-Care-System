@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User profiles
+    match /users/{userId} {
+      allow read;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Plant data
+    match /plants/{plantId} {
+      allow read;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && 
+                         resource.data.userId == request.auth.uid;
+    }
+    
+    // Disease checks
+    match /diseaseChecks/{checkId} {
+      allow read;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && 
+                         resource.data.userId == request.auth.uid;
+    }
+    
+    // Community posts
+    match /communityPosts/{postId} {
+      allow read;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && 
+                         resource.data.userId == request.auth.uid;
+    }
+  }
+}

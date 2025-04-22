@@ -1,0 +1,35 @@
+rules_version = '2';
+
+// Craft rules based on your security requirements and requests paths.
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Allow public read access to all files
+    match /{allPaths=**} {
+      allow read;
+    }
+    
+    // Plant images - Allow authenticated users to upload
+    match /plant-images/{userId}/{fileName} {
+      allow write: if request.auth != null && 
+                   request.auth.uid == userId &&
+                   request.resource.size < 5 * 1024 * 1024 && // 5MB
+                   request.resource.contentType.matches('image/.*');
+    }
+    
+    // Disease images - Allow authenticated users to upload
+    match /disease-images/{userId}/{fileName} {
+      allow write: if request.auth != null && 
+                   request.auth.uid == userId &&
+                   request.resource.size < 5 * 1024 * 1024 && // 5MB
+                   request.resource.contentType.matches('image/.*');
+    }
+    
+    // Community post images - Allow authenticated users to upload
+    match /community-images/{userId}/{fileName} {
+      allow write: if request.auth != null && 
+                   request.auth.uid == userId &&
+                   request.resource.size < 5 * 1024 * 1024 && // 5MB
+                   request.resource.contentType.matches('image/.*');
+    }
+  }
+}
