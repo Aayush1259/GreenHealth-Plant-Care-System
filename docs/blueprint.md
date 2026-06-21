@@ -157,13 +157,13 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-apiKey: "AIzaSyAlnb_txtpjQqLPoDdPEuQcVKGwYmZygw8",
-authDomain: "plantcaresystem-d0fdd.firebaseapp.com",
-projectId: "plantcaresystem-d0fdd",
-storageBucket: "plantcaresystem-d0fdd.firebasestorage.app",
-messagingSenderId: "327115438975",
-appId: "1:327115438975:web:dea286e6bf62f68987384a",
-measurementId: "G-RJM57F3Y0T"
+apiKey: "",
+authDomain: "",
+projectId: "",
+storageBucket: "",
+messagingSenderId: "",
+appId: "",
+measurementId: ""
 };
 
 // Initialize Firebase
@@ -172,6 +172,6 @@ const analytics = getAnalytics(app);
 
 # Configure Gemini - replace with your actual API key
 
-API_KEY = "AIzaSyDAxUv4BTwOT6COqs3c_wSgzYc37CGF5rE"
+API_KEY = ""
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("models/gemini-2.0-flash-exp")
