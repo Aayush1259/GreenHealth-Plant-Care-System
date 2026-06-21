@@ -1,4 +1,4 @@
-# **App Name**: VerdantAI
+# **App Name**: GreenHealth Plant Care System
 
 ## Core Features
 
